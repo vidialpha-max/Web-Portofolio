@@ -3,8 +3,6 @@
   --accent-color: #8f84ff;
   --bg-dark: #0b0b0c;
   --text-light: #e0e0e0;
-  --section-padding: 80px;
-  --radius: 8px;
 }
 
 * {
@@ -23,7 +21,7 @@ body {
   color: var(--text-light);
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 72px; /* space untuk header (fixed) */
+  padding-top: 72px;
 }
 
 header {
@@ -125,7 +123,7 @@ header {
 }
 
 .menu-toggle {
-  display: flex;
+  display: none;
   cursor: pointer;
   margin-left: 16px;
 }
@@ -145,7 +143,7 @@ header {
   padding: 0px 64px;
   min-height: 100vh;
   max-width: 1200px;
-  margin: auto; ;
+  margin: auto;
 }
 
 .hero-content {
@@ -178,7 +176,7 @@ header {
 .btn-primary,
 .btn-secondary {
   padding: 12px 24px;
-  border-radius: var(--radius);
+  border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s;
@@ -239,7 +237,7 @@ header {
 
 /* ABOUT */
 .about-me {
-  padding: var(--section-padding) 64px;
+  padding: 80px 64px;
   text-align: center;
   max-width: 1200px;
   margin: auto;
@@ -281,7 +279,7 @@ header {
 
 /* SKILLS */
 .My-Skill {
-  padding: var(--section-padding) 64px;
+  padding: 80px 64px;
   text-align: center;
   max-width: 1200px;
   margin: auto;
@@ -313,6 +311,9 @@ header {
   border-color: var(--accent-color);
 }
 
+
+
+
 /* PROJECTS */
 .project-2025 {
   padding: 120px 64px;
@@ -332,7 +333,6 @@ header {
   color: transparent;
 }
 
-/* PROJECTS: gunakan card column flow, video pada frame terbatas */
 .project-2025-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -343,7 +343,6 @@ header {
   position: relative;
   border-radius: 24px;
   overflow: hidden;
-  /* biarkan height auto agar konten tidak overlap */
   height: auto;
   cursor: pointer;
   transform-style: preserve-3d;
@@ -354,11 +353,11 @@ header {
   flex-direction: column;
 }
 
-/* frame khusus untuk video agar tidak menutupi seluruh card */
+/* frame khusus untuk video */
 .project-bg {
   position: relative;
   width: 100%;
-  height: 220px; /* tinggi konsisten untuk preview */
+  height: 220px;
   overflow: hidden;
 }
 
@@ -409,6 +408,7 @@ header {
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
+  gap: 25px;
 }
 
 .project-content a:hover {
@@ -426,14 +426,13 @@ header {
   transform: scale(1.06) translateZ(0);
 }
 
-/* jaga perspektif hanya saat hover */
 .project-card:hover {
   perspective: 700px;
 }
 
 /* CONTACT */
 .contact {
-  padding: var(--section-padding) 64px;
+  padding: 80px 64px;
   text-align: center;
   max-width: 1200px;
   margin: auto;
@@ -457,7 +456,7 @@ header {
 .contact textarea {
   padding: 12px 16px;
   border: none;
-  border-radius: var(--radius);
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
   color: var(--text-light);
   resize: none;
@@ -499,7 +498,7 @@ footer {
   transition: 0.3s;
 }
 
-/* <<< FIX FOOTER ICON >>> */
+/* FOOTER ICON */
 .footer-social a:link i,
 .footer-social a:visited i,
 .footer-social a:active i {
@@ -510,12 +509,15 @@ footer {
   color: var(--primary-color) !important;
 }
 
-/* RESPONSIVE */
+/* ============================
+   RESPONSIVE 1024px
+=============================== */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column-reverse;
     text-align: center;
     gap: 48px;
+    padding: 0 32px;
   }
 
   .hero-btns {
@@ -535,6 +537,9 @@ footer {
   }
 }
 
+/* ============================
+   RESPONSIVE 820px (NAVBAR MOBILE)
+=============================== */
 @media (max-width: 820px) {
   .menu-toggle {
     display: block;
@@ -562,6 +567,89 @@ footer {
   }
 }
 
+/* ============================
+   RESPONSIVE 768px (TABLET)
+=============================== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 32px;
+  }
+
+  .hero {
+    gap: 32px;
+  }
+
+  .about-me,
+  .My-Skill,
+  .project-2025,
+  .contact {
+    padding: 64px 32px;
+  }
+
+  .about-img {
+    margin-left: 0;
+  }
+
+  .about-img img {
+    width: 220px;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+  }
+
+  .project-2025-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-container {
+    padding: 0 32px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ============================
+   RESPONSIVE 640px (SMALL TABLET / LARGE PHONE)
+=============================== */
+@media (max-width: 640px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .navbar-menu li a {
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 0 16px;
+    padding-top: 40px;
+    min-height: auto;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-title {
+    font-size: 32px;
+  }
+
+  .contact form {
+    max-width: 100%;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+}
+
+/* ============================
+   RESPONSIVE 480px (PHONE)
+=============================== */
 @media (max-width: 480px) {
   .hero-content h1 {
     font-size: 28px;
