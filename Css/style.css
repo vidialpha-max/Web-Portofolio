@@ -107,19 +107,22 @@ header {
 .navbar-menu li:last-child a::after {
   content: none;
 }
-  
-.navbar-menu li:last-child a {
-  background: var(--primary-color);
-  color: #fff;
-  border: 1px solid var(--primary-color);
-  padding: 8px 16px;
+
+.btn-nav {
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
   border-radius: 8px 32px;
-  transition: 0.30
+  background: var(--primary-color);
+  /* color: #fff; */
 }
 
-.navbar-menu li:last-child a:hover {
-  background: #6819ef;
-  transform: scale(1.03);
+
+.btn-nav:hover {  
+  background: var(--accent-color);
+  transform: translateY(-4px);
 }
 
 .menu-toggle {
@@ -129,7 +132,7 @@ header {
 }
 
 .menu-toggle i {
-  width: 28p;
+  width: 28px;
   height: 28px;
   color: var(--primary-color);
 }
@@ -175,7 +178,7 @@ header {
 
 .btn-primary,
 .btn-secondary {
-  padding: 12px 24px;
+  padding: 8px 16px;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
@@ -237,7 +240,7 @@ header {
 
 /* ABOUT */
 .about-me {
-  padding: 80px 64px;
+  padding: 136px 64px;
   text-align: center;
   max-width: 1200px;
   margin: auto;
@@ -246,7 +249,7 @@ header {
 .about-me h2 {
   color: var(--primary-color);
   font-size: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 }
 
 .about-content {
@@ -279,7 +282,7 @@ header {
 
 /* SKILLS */
 .My-Skill {
-  padding: 80px 64px;
+  padding: 136px 64px;
   text-align: center;
   max-width: 1200px;
   margin: auto;
@@ -288,7 +291,7 @@ header {
 .My-Skill h1 {
   font-size: 32px;
   color: var(--primary-color);
-  margin-bottom: 48px;
+  margin-bottom: 64px;
 }
 
 .skill-grid {
@@ -311,22 +314,19 @@ header {
   border-color: var(--accent-color);
 }
 
-
-
-
 /* PROJECTS */
 .project-2025 {
-  padding: 120px 64px;
-  max-width: 1300px;
+  padding: 136px 64px;
+  max-width: 1200px;
   margin: auto;
   position: relative;
 }
 
 .project-title {
   text-align: center;
-  font-size: 48px;
+  font-size: 32px;
   margin-bottom: 64px;
-  background: linear-gradient(90deg, #9b5cff, #5ad2ff);
+  background: var(--primary-color);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -353,68 +353,6 @@ header {
   flex-direction: column;
 }
 
-/* frame khusus untuk video */
-.project-bg {
-  position: relative;
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-}
-
-.project-card:hover {
-  transform: translateY(-12px) scale(1.03);
-  border-color: rgba(255,255,255,0.3);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-}
-
-/* Background video */
-.project-bg video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform-origin: center;
-  transition: transform 0.45s ease, opacity 0.35s ease;
-}
-
-.project-card:hover .project-bg video {
-  opacity: 1;
-}
-
-/* Content */
-.project-content {
-  position: relative;
-  z-index: 2;
-  padding: 20px;
-  background: linear-gradient(180deg, rgba(0,0,0,0.02), transparent);
-}
-
-.project-content h3 {
-  font-size: 22px;
-  margin-bottom: 6px;
-}
-
-.project-content p {
-  opacity: 0.8;
-  margin-bottom: 12px;
-}
-
-.project-content a {
-  background: #8f84ff;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-  gap: 25px;
-}
-
-.project-content a:hover {
-  background: #6759ff;
-}
-
 /* hover visual */
 .project-card:hover {
   transform: translateY(-10px) scale(1.02);
@@ -430,9 +368,63 @@ header {
   perspective: 700px;
 }
 
-/* CONTACT */
+/* frame khusus untuk video */
+.project-bg {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  border-color: rgba(255,255,255,0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.project-card:hover .project-bg video {
+  opacity: 1;
+}
+
+/* Background video */
+.project-bg video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center;
+  transition: transform 0.45s ease, opacity 0.35s ease;
+}
+
+/* Content */
+.project-content {
+  position: relative;
+  z-index: 2;
+  padding: 32px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), transparent);
+}
+
+.project-content h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.project-content p {
+  opacity: 0.8;
+  margin-bottom: 24px;
+}
+
+.btn-project {  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* Contact */
 .contact {
-  padding: 80px 64px;
+  padding: 136px 64px;
   text-align: center;
   max-width: 1200px;
   margin: auto;
@@ -441,7 +433,7 @@ header {
 .contact h2 {
   font-size: 32px;
   color: var(--primary-color);
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 }
 
 .contact form {
@@ -462,11 +454,14 @@ header {
   resize: none;
 }
 
-.contact button {
-  align-self: center;
+.contact textarea {
+  padding-bottom: 96px;
 }
 
-/* FOOTER */
+.contact button {
+  align-self: center;
+} 
+
 footer {
   background: rgba(11, 11, 12, 0.9);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -492,10 +487,11 @@ footer {
   gap: 24px;
 }
 
-.footer-social i {
+.footer-social a {
   width: 24px;
   height: 24px;
   transition: 0.3s;
+  color: var(--primary-color);
 }
 
 /* FOOTER ICON */
@@ -510,7 +506,7 @@ footer {
 }
 
 /* ============================
-   RESPONSIVE 1024px
+   RESPONSIVE 1024px [ Laptop kecil / iPad landscape / Monitor kecil ]
 =============================== */
 @media (max-width: 1024px) {
   .hero {
@@ -546,10 +542,10 @@ footer {
   }
 
   .navbar-menu {
-    display: none;
+    display: none;  
     flex-direction: column;
     position: absolute;
-    top: 72px;
+    top: 64px;
     right: 0;
     width: 100%;
     text-align: center;
@@ -648,7 +644,7 @@ footer {
 }
 
 /* ============================
-   RESPONSIVE 480px (PHONE)
+   RESPONSIVE 480px (SMALL PHONE)
 =============================== */
 @media (max-width: 480px) {
   .hero-content h1 {

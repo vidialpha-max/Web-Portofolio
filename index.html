@@ -1,3 +1,10 @@
+<!-- linkdin blm ada
+project blm di tambah
+Cv belum di bikin-->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,7 +45,7 @@
             <li><a href="#About">About</a></li>
             <li><a href="#Skill">Skills</a></li>
             <li><a href="#Projects">Projects</a></li>
-            <li><a href="#Contact" class="btn-secondary">Contact</a></li>
+            <li><a href="#Contact" class="btn-nav" >Contact</a></li>
           </ul>
             <div class="menu-toggle" id="menu-toggle">
               <i data-feather="menu"></i>
@@ -57,8 +64,8 @@
         </p>
 
         <div class="hero-btns">
-          <a href="#" class="btn-primary">Download CV</a>
-          <a href="#About" class="btn-secondary">Learn More</a>
+          <a href="#" download="" class="btn-primary">Download CV</a>
+          <a href="#About" class="btn-secondary">View More</a>
         </div>
 
         <div class="hero-social" >
@@ -93,7 +100,7 @@
 
     <!-- SKILLS -->
     <section class="My-Skill" id="Skill">
-      <h1 data-aos="fade-up">My Skillss</h1>
+      <h1 data-aos="fade-up">My Skills</h1>
       <div class="skill-grid">
         <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
           <i class="devicon-html5-plain colored"></i> HTML
@@ -108,10 +115,28 @@
           <i class="devicon-react-original colored"></i> React
         </div>
         <div class="skill-item" data-aos="fade-up" data-aos-delay="500">
-          <i class="devicon-python-plain colored"></i> Python
+          <i class="devicon-tailwindcss-plain colored"></i> Tailwind
         </div>
         <div class="skill-item" data-aos="fade-up" data-aos-delay="600">
-          <i class="devicon-figma-plain colored"></i> Figma
+          <i class="devicon-python-plain colored"></i> Python
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="700">
+          <i class="devicon-typescript-plain colored"></i> Typescript
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="800">
+          <i class="devicon-php-plain colored"></i> PHP
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="900">
+          <i class="devicon-vitejs-plain colored"></i> Vite
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="1000">
+          <i class="devicon-cplusplus-plain colored"></i> C++
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="1100">
+          <i class="devicon-mongodb-plain colored"></i> MongoDB
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="1100">
+          <i class="devicon-mysql-plain colored"></i> MySQL
         </div>
       </div>
     </section>
@@ -131,34 +156,42 @@
     <div class="project-content">
         <h3>Portfolio Website</h3>
         <p>Personal portfolio website showcasing my skills, projects, and creative works.</p>
-        <a href="#" target="_blank">View Project</a>
-        <a href="https://github.com/vidialpha-max/Web-Portofolio" target="_blank">View Code</a>
+        <div class="btn-project">
+          <a class="btn-primary" href="alpharidho-portofolio.netlify.app" target="_blank" rel="noopener noreferrer">View Project</a>
+          <a class="btn-primary" href="https://github.com/vidialpha-max/Web-Portofolio" target="_blank" rel="noopener noreferrer">View Code</a>
+        </div>
       </div>
     </div>
 
     <!-- PROJECT 2 -->
-    <div class="project-card" data-video="Assets/landingpage.mp4">
+    <div class="project-card" data-video="#">
       <div class="project-bg">
-        <video muted loop preload="none" data-src="Assets/landingpage.mp4"></video>
+        <video muted loop preload="none" data-src="#"></video>
       </div>
 
       <div class="project-content">
-        <h3>Adobe Illustrator – Character Design (Gyu)</h3>
-        <p>Custom character illustration created using Adobe Illustrator with clean vector shapes.</p>
-        <a href="#" target="_blank">View Project</a>
+        <h3>Zamani Store</h3>
+        <p>A modern and reliable platform offering curated, high-quality pre-owned goods</p>
+        <div class="btn-project">
+        <a class=btn-primary href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+        <a class="btn-primary" href="#" target="_blank" rel="noopener noreferrer">View Code</a>
+        </div>
       </div>
     </div>
 
     <!-- PROJECT 3 -->
-    <div class="project-card" data-video="Assets/dashboard.mp4">
+    <div class="project-card" data-video="#">
       <div class="project-bg">
-        <video muted loop preload="none" data-src="Assets/dashboard.mp4"></video>
+        <video muted loop preload="none" data-src="#"></video>
       </div>
 
       <div class="project-content">
         <h3>Top-Up Game Website</h3>
         <p>Modern and responsive website concept for fast and easy game credit top-up services.</p>
-        <a href="#" target="_blank">View Project</a>
+        <div class="btn-project">
+        <a class="btn-primary" href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+        <a class="btn-primary" href="#" target="_blank" rel="noopener noreferrer">View Code</a>
+        </div>
       </div>
     </div>
   </div>
@@ -167,7 +200,7 @@
     <!-- CONTACT -->
     <section class="contact" id="Contact">
       <h2 data-aos="fade-up">Contact Me</h2>
-      <form id="contact-form" data-aos="fade-up">
+      <form id="contact-form" data-aos="fade-up" action="https://formspree.io/f/xgvjkyke" method="POST">
         <input type="text" name="user_name" placeholder="Your Name" required />
         <input type="email" name="user_email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" required></textarea>
@@ -180,15 +213,14 @@
       <div class="footer-container">
         <p>© 2025 Alpharidho — All Rights Reserved</p>
         <div class="footer-social">
-          <a href="https://www.instagram.com/alpharidhooo/"><i data-feather="instagram"></i></a>
-          <a href="https://github.com/vidialpha-max"><i data-feather="github"></i></a>
+          <a href="https://www.instagram.com/alpharidhooo/"target="_blank" rel="noopener noreferrer"><i data-feather="instagram"></i></a>
+          <a href="https://github.com/vidialpha-max" target="_blank" rel="noopener noreferrer"><i data-feather="github"></i></a>
           <a href="#"><i data-feather="linkedin"></i></a>
         </div>
       </div>
     </footer>
 
     <!-- JS -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
   </body>

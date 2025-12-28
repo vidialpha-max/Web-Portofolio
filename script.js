@@ -52,30 +52,27 @@ cards.forEach(card => {
 });
 
 // ================================
-// EMAILJS SEND FORM
+// FORMSPREE SEND FORM
 // ================================
 
-if (window.emailjs) {
-  emailjs.init("DR8nRGlGyS9KKUVCf");
+// asyncronous
+const form = document.getElementById('contact-form')
 
-  const form = document.getElementById("contact-form");
+form.addEventListener('submit', async (e) => {
+  e.preventDefault()
 
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
+  const data = new FormData(form)
 
-      emailjs.sendForm("service_814a7qg", "template_myyni1q", form)
-        .then(() => {
-          alert("Message sent successfully!");
-          form.reset();
-        })
-        .catch((err) => {
-          console.error(err);
-          alert("Failed to send message. Try again later.");
-        });
-    });
-  }
-}
+  await fetch("https://formspree.io/f/xgvjkyke", {
+    method: "POST",
+    body: data,
+    headers: { "Accept": "application/json" }
+  })
+  console.log(data)
+  
+  location.reload()
+})
+
 
 // ================================
 // MOBILE MENU TOGGLE
