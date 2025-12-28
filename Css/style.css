@@ -218,12 +218,7 @@ header {
 }
 
 .hero-social a:hover i {
-  color: var(--accent-color);
   transform: scale(1.15);
-}
-
-.hero-social a:active i {
-  color: var(--primary-color) !important;
 }
 
 .hero-img {
@@ -492,13 +487,6 @@ footer {
   height: 24px;
   transition: 0.3s;
   color: var(--primary-color);
-}
-
-/* FOOTER ICON */
-.footer-social a:link i,
-.footer-social a:visited i,
-.footer-social a:active i {
-  color: var(--text-light) !important;
 }
 
 .footer-social a:hover i {

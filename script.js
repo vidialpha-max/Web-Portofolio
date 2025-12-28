@@ -52,6 +52,23 @@ cards.forEach(card => {
 });
 
 // ================================
+// alert project belom kelar
+// ================================
+const onprogress1 = document.getElementById('onprogress2');
+const onprogress2 = document.getElementById('onprogress3');
+
+onprogress1.addEventListener('click', function (e) {
+  e.preventDefault();
+  alert('Project belum selesai 🚧');
+});
+
+onprogress2.addEventListener('click', function (e) {
+  e.preventDefault();
+  alert('Project belum selesai 🚧');
+});
+
+
+// ================================
 // FORMSPREE SEND FORM
 // ================================
 
